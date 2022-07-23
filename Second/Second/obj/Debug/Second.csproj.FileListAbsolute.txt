@@ -1,0 +1,10 @@
+C:\Users\Admin\source\repos\Second\Second\bin\Debug\Second.exe.config
+C:\Users\Admin\source\repos\Second\Second\bin\Debug\Second.exe
+C:\Users\Admin\source\repos\Second\Second\bin\Debug\Second.pdb
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.Form1.resources
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.Properties.Resources.resources
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.exe
+C:\Users\Admin\source\repos\Second\Second\obj\Debug\Second.pdb
