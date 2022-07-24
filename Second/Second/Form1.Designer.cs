@@ -44,26 +44,26 @@ namespace Second
             this.Inventory_RedPotion = new System.Windows.Forms.PictureBox();
             this.Inventory_Maze = new System.Windows.Forms.PictureBox();
             this.PointPannel = new System.Windows.Forms.TableLayoutPanel();
-            this.PlayerHitPoint = new System.Windows.Forms.Label();
-            this.Player = new System.Windows.Forms.Label();
-            this.Bat = new System.Windows.Forms.Label();
-            this.BatHitPoint = new System.Windows.Forms.Label();
-            this.Ghost = new System.Windows.Forms.Label();
-            this.GhostHitPoint = new System.Windows.Forms.Label();
-            this.Ghoul = new System.Windows.Forms.Label();
             this.GhoulHitPoint = new System.Windows.Forms.Label();
+            this.Ghoul = new System.Windows.Forms.Label();
+            this.GhostHitPoint = new System.Windows.Forms.Label();
+            this.Ghost = new System.Windows.Forms.Label();
+            this.BatHitPoint = new System.Windows.Forms.Label();
+            this.Bat = new System.Windows.Forms.Label();
+            this.Player = new System.Windows.Forms.Label();
+            this.PlayerHitPoint = new System.Windows.Forms.Label();
             this.MoveGroupBox = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.MoveUp = new System.Windows.Forms.Button();
-            this.MoveLeft = new System.Windows.Forms.Button();
-            this.MoveRight = new System.Windows.Forms.Button();
             this.MoveDown = new System.Windows.Forms.Button();
+            this.MoveRight = new System.Windows.Forms.Button();
+            this.MoveLeft = new System.Windows.Forms.Button();
+            this.MoveUp = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.AttackGroupBox = new System.Windows.Forms.GroupBox();
-            this.Attack_Up = new System.Windows.Forms.Button();
-            this.Attack_Left = new System.Windows.Forms.Button();
-            this.Attack_Right = new System.Windows.Forms.Button();
             this.Attack_Down = new System.Windows.Forms.Button();
+            this.Attack_Right = new System.Windows.Forms.Button();
+            this.Attack_Left = new System.Windows.Forms.Button();
+            this.Attack_Up = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MapIcon_Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MapIcon_Sword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MapIcon_Bat)).BeginInit();
@@ -93,6 +93,7 @@ namespace Second
             this.MapIcon_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Player.TabIndex = 0;
             this.MapIcon_Player.TabStop = false;
+            this.MapIcon_Player.Visible = false;
             this.MapIcon_Player.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MapIcon_Sword
@@ -105,6 +106,7 @@ namespace Second
             this.MapIcon_Sword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Sword.TabIndex = 1;
             this.MapIcon_Sword.TabStop = false;
+            this.MapIcon_Sword.Visible = false;
             this.MapIcon_Sword.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // MapIcon_Bat
@@ -117,6 +119,8 @@ namespace Second
             this.MapIcon_Bat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Bat.TabIndex = 2;
             this.MapIcon_Bat.TabStop = false;
+            this.MapIcon_Bat.Visible = false;
+            this.MapIcon_Bat.Click += new System.EventHandler(this.MapIcon_Bat_Click);
             // 
             // MapIcon_Ghos
             // 
@@ -128,6 +132,7 @@ namespace Second
             this.MapIcon_Ghos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Ghos.TabIndex = 3;
             this.MapIcon_Ghos.TabStop = false;
+            this.MapIcon_Ghos.Visible = false;
             // 
             // MapIcon_Ghost
             // 
@@ -139,6 +144,8 @@ namespace Second
             this.MapIcon_Ghost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Ghost.TabIndex = 4;
             this.MapIcon_Ghost.TabStop = false;
+            this.MapIcon_Ghost.Visible = false;
+            this.MapIcon_Ghost.Click += new System.EventHandler(this.MapIcon_Ghost_Click);
             // 
             // MapIcon_BluePotion
             // 
@@ -150,6 +157,7 @@ namespace Second
             this.MapIcon_BluePotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_BluePotion.TabIndex = 5;
             this.MapIcon_BluePotion.TabStop = false;
+            this.MapIcon_BluePotion.Visible = false;
             // 
             // MapIcon_RedPotion
             // 
@@ -161,6 +169,7 @@ namespace Second
             this.MapIcon_RedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_RedPotion.TabIndex = 6;
             this.MapIcon_RedPotion.TabStop = false;
+            this.MapIcon_RedPotion.Visible = false;
             // 
             // MapIcon_Mase
             // 
@@ -172,6 +181,7 @@ namespace Second
             this.MapIcon_Mase.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Mase.TabIndex = 7;
             this.MapIcon_Mase.TabStop = false;
+            this.MapIcon_Mase.Visible = false;
             // 
             // MapIcon_Bow
             // 
@@ -183,6 +193,7 @@ namespace Second
             this.MapIcon_Bow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MapIcon_Bow.TabIndex = 9;
             this.MapIcon_Bow.TabStop = false;
+            this.MapIcon_Bow.Visible = false;
             this.MapIcon_Bow.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // Inventory_Sword
@@ -195,6 +206,7 @@ namespace Second
             this.Inventory_Sword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Inventory_Sword.TabIndex = 10;
             this.Inventory_Sword.TabStop = false;
+            this.Inventory_Sword.Visible = false;
             // 
             // Inventory_BluePostion
             // 
@@ -206,6 +218,7 @@ namespace Second
             this.Inventory_BluePostion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Inventory_BluePostion.TabIndex = 11;
             this.Inventory_BluePostion.TabStop = false;
+            this.Inventory_BluePostion.Visible = false;
             // 
             // Inventory_Bow
             // 
@@ -217,6 +230,7 @@ namespace Second
             this.Inventory_Bow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Inventory_Bow.TabIndex = 12;
             this.Inventory_Bow.TabStop = false;
+            this.Inventory_Bow.Visible = false;
             // 
             // Inventory_RedPotion
             // 
@@ -228,6 +242,8 @@ namespace Second
             this.Inventory_RedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Inventory_RedPotion.TabIndex = 13;
             this.Inventory_RedPotion.TabStop = false;
+            this.Inventory_RedPotion.Visible = false;
+            this.Inventory_RedPotion.Click += new System.EventHandler(this.Inventory_RedPotion_Click);
             // 
             // Inventory_Maze
             // 
@@ -239,6 +255,8 @@ namespace Second
             this.Inventory_Maze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Inventory_Maze.TabIndex = 14;
             this.Inventory_Maze.TabStop = false;
+            this.Inventory_Maze.Visible = false;
+            this.Inventory_Maze.Click += new System.EventHandler(this.Inventory_Maze_Click);
             // 
             // PointPannel
             // 
@@ -265,32 +283,41 @@ namespace Second
             this.PointPannel.TabIndex = 15;
             this.PointPannel.Paint += new System.Windows.Forms.PaintEventHandler(this.PointPannel_Paint);
             // 
-            // PlayerHitPoint
+            // GhoulHitPoint
             // 
-            this.PlayerHitPoint.AutoSize = true;
-            this.PlayerHitPoint.Location = new System.Drawing.Point(51, 0);
-            this.PlayerHitPoint.Name = "PlayerHitPoint";
-            this.PlayerHitPoint.Size = new System.Drawing.Size(83, 12);
-            this.PlayerHitPoint.TabIndex = 16;
-            this.PlayerHitPoint.Text = "PlayerHitPoint";
+            this.GhoulHitPoint.AutoSize = true;
+            this.GhoulHitPoint.Location = new System.Drawing.Point(51, 90);
+            this.GhoulHitPoint.Name = "GhoulHitPoint";
+            this.GhoulHitPoint.Size = new System.Drawing.Size(80, 12);
+            this.GhoulHitPoint.TabIndex = 23;
+            this.GhoulHitPoint.Text = "GhoulHitPoint";
             // 
-            // Player
+            // Ghoul
             // 
-            this.Player.AutoSize = true;
-            this.Player.Location = new System.Drawing.Point(3, 0);
-            this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(41, 12);
-            this.Player.TabIndex = 17;
-            this.Player.Text = "Player";
+            this.Ghoul.AutoSize = true;
+            this.Ghoul.Location = new System.Drawing.Point(3, 90);
+            this.Ghoul.Name = "Ghoul";
+            this.Ghoul.Size = new System.Drawing.Size(38, 12);
+            this.Ghoul.TabIndex = 22;
+            this.Ghoul.Text = "Ghoul";
             // 
-            // Bat
+            // GhostHitPoint
             // 
-            this.Bat.AutoSize = true;
-            this.Bat.Location = new System.Drawing.Point(3, 30);
-            this.Bat.Name = "Bat";
-            this.Bat.Size = new System.Drawing.Size(23, 12);
-            this.Bat.TabIndex = 18;
-            this.Bat.Text = "Bat";
+            this.GhostHitPoint.AutoSize = true;
+            this.GhostHitPoint.Location = new System.Drawing.Point(51, 60);
+            this.GhostHitPoint.Name = "GhostHitPoint";
+            this.GhostHitPoint.Size = new System.Drawing.Size(80, 12);
+            this.GhostHitPoint.TabIndex = 21;
+            this.GhostHitPoint.Text = "GhostHitPoint";
+            // 
+            // Ghost
+            // 
+            this.Ghost.AutoSize = true;
+            this.Ghost.Location = new System.Drawing.Point(3, 60);
+            this.Ghost.Name = "Ghost";
+            this.Ghost.Size = new System.Drawing.Size(38, 12);
+            this.Ghost.TabIndex = 20;
+            this.Ghost.Text = "Ghost";
             // 
             // BatHitPoint
             // 
@@ -302,41 +329,33 @@ namespace Second
             this.BatHitPoint.Text = "BatHitPoint";
             this.BatHitPoint.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Ghost
+            // Bat
             // 
-            this.Ghost.AutoSize = true;
-            this.Ghost.Location = new System.Drawing.Point(3, 60);
-            this.Ghost.Name = "Ghost";
-            this.Ghost.Size = new System.Drawing.Size(38, 12);
-            this.Ghost.TabIndex = 20;
-            this.Ghost.Text = "Ghost";
+            this.Bat.AutoSize = true;
+            this.Bat.Location = new System.Drawing.Point(3, 30);
+            this.Bat.Name = "Bat";
+            this.Bat.Size = new System.Drawing.Size(23, 12);
+            this.Bat.TabIndex = 18;
+            this.Bat.Text = "Bat";
             // 
-            // GhostHitPoint
+            // Player
             // 
-            this.GhostHitPoint.AutoSize = true;
-            this.GhostHitPoint.Location = new System.Drawing.Point(51, 60);
-            this.GhostHitPoint.Name = "GhostHitPoint";
-            this.GhostHitPoint.Size = new System.Drawing.Size(80, 12);
-            this.GhostHitPoint.TabIndex = 21;
-            this.GhostHitPoint.Text = "GhostHitPoint";
+            this.Player.AutoSize = true;
+            this.Player.Location = new System.Drawing.Point(3, 0);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(41, 12);
+            this.Player.TabIndex = 17;
+            this.Player.Text = "Player";
             // 
-            // Ghoul
+            // PlayerHitPoint
             // 
-            this.Ghoul.AutoSize = true;
-            this.Ghoul.Location = new System.Drawing.Point(3, 90);
-            this.Ghoul.Name = "Ghoul";
-            this.Ghoul.Size = new System.Drawing.Size(38, 12);
-            this.Ghoul.TabIndex = 22;
-            this.Ghoul.Text = "Ghoul";
-            // 
-            // GhoulHitPoint
-            // 
-            this.GhoulHitPoint.AutoSize = true;
-            this.GhoulHitPoint.Location = new System.Drawing.Point(51, 90);
-            this.GhoulHitPoint.Name = "GhoulHitPoint";
-            this.GhoulHitPoint.Size = new System.Drawing.Size(80, 12);
-            this.GhoulHitPoint.TabIndex = 23;
-            this.GhoulHitPoint.Text = "GhoulHitPoint";
+            this.PlayerHitPoint.AutoSize = true;
+            this.PlayerHitPoint.Location = new System.Drawing.Point(51, 0);
+            this.PlayerHitPoint.Name = "PlayerHitPoint";
+            this.PlayerHitPoint.Size = new System.Drawing.Size(83, 12);
+            this.PlayerHitPoint.TabIndex = 16;
+            this.PlayerHitPoint.Text = "PlayerHitPoint";
+            this.PlayerHitPoint.Click += new System.EventHandler(this.PlayerHitPoint_Click);
             // 
             // MoveGroupBox
             // 
@@ -353,32 +372,14 @@ namespace Second
             this.MoveGroupBox.Text = "Move";
             this.MoveGroupBox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // MoveDown
             // 
-            this.groupBox2.Location = new System.Drawing.Point(0, 133);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(163, 127);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // MoveUp
-            // 
-            this.MoveUp.Location = new System.Drawing.Point(43, 28);
-            this.MoveUp.Name = "MoveUp";
-            this.MoveUp.Size = new System.Drawing.Size(75, 23);
-            this.MoveUp.TabIndex = 19;
-            this.MoveUp.Text = "Up";
-            this.MoveUp.UseVisualStyleBackColor = true;
-            // 
-            // MoveLeft
-            // 
-            this.MoveLeft.Location = new System.Drawing.Point(5, 56);
-            this.MoveLeft.Name = "MoveLeft";
-            this.MoveLeft.Size = new System.Drawing.Size(75, 23);
-            this.MoveLeft.TabIndex = 20;
-            this.MoveLeft.Text = "Left";
-            this.MoveLeft.UseVisualStyleBackColor = true;
+            this.MoveDown.Location = new System.Drawing.Point(43, 83);
+            this.MoveDown.Name = "MoveDown";
+            this.MoveDown.Size = new System.Drawing.Size(75, 23);
+            this.MoveDown.TabIndex = 22;
+            this.MoveDown.Text = "Down";
+            this.MoveDown.UseVisualStyleBackColor = true;
             // 
             // MoveRight
             // 
@@ -389,14 +390,32 @@ namespace Second
             this.MoveRight.Text = "Right";
             this.MoveRight.UseVisualStyleBackColor = true;
             // 
-            // MoveDown
+            // MoveLeft
             // 
-            this.MoveDown.Location = new System.Drawing.Point(43, 83);
-            this.MoveDown.Name = "MoveDown";
-            this.MoveDown.Size = new System.Drawing.Size(75, 23);
-            this.MoveDown.TabIndex = 22;
-            this.MoveDown.Text = "Down";
-            this.MoveDown.UseVisualStyleBackColor = true;
+            this.MoveLeft.Location = new System.Drawing.Point(5, 56);
+            this.MoveLeft.Name = "MoveLeft";
+            this.MoveLeft.Size = new System.Drawing.Size(75, 23);
+            this.MoveLeft.TabIndex = 20;
+            this.MoveLeft.Text = "Left";
+            this.MoveLeft.UseVisualStyleBackColor = true;
+            // 
+            // MoveUp
+            // 
+            this.MoveUp.Location = new System.Drawing.Point(43, 28);
+            this.MoveUp.Name = "MoveUp";
+            this.MoveUp.Size = new System.Drawing.Size(75, 23);
+            this.MoveUp.TabIndex = 19;
+            this.MoveUp.Text = "Up";
+            this.MoveUp.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(0, 133);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(163, 127);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
             // 
             // groupBox4
             // 
@@ -421,24 +440,14 @@ namespace Second
             this.AttackGroupBox.TabStop = false;
             this.AttackGroupBox.Text = "Attack";
             // 
-            // Attack_Up
+            // Attack_Down
             // 
-            this.Attack_Up.Location = new System.Drawing.Point(43, 28);
-            this.Attack_Up.Name = "Attack_Up";
-            this.Attack_Up.Size = new System.Drawing.Size(75, 23);
-            this.Attack_Up.TabIndex = 23;
-            this.Attack_Up.Text = "Up";
-            this.Attack_Up.UseVisualStyleBackColor = true;
-            this.Attack_Up.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // Attack_Left
-            // 
-            this.Attack_Left.Location = new System.Drawing.Point(5, 57);
-            this.Attack_Left.Name = "Attack_Left";
-            this.Attack_Left.Size = new System.Drawing.Size(75, 23);
-            this.Attack_Left.TabIndex = 23;
-            this.Attack_Left.Text = "Left";
-            this.Attack_Left.UseVisualStyleBackColor = true;
+            this.Attack_Down.Location = new System.Drawing.Point(43, 86);
+            this.Attack_Down.Name = "Attack_Down";
+            this.Attack_Down.Size = new System.Drawing.Size(75, 23);
+            this.Attack_Down.TabIndex = 25;
+            this.Attack_Down.Text = "Down";
+            this.Attack_Down.UseVisualStyleBackColor = true;
             // 
             // Attack_Right
             // 
@@ -449,14 +458,24 @@ namespace Second
             this.Attack_Right.Text = "Right";
             this.Attack_Right.UseVisualStyleBackColor = true;
             // 
-            // Attack_Down
+            // Attack_Left
             // 
-            this.Attack_Down.Location = new System.Drawing.Point(43, 86);
-            this.Attack_Down.Name = "Attack_Down";
-            this.Attack_Down.Size = new System.Drawing.Size(75, 23);
-            this.Attack_Down.TabIndex = 25;
-            this.Attack_Down.Text = "Down";
-            this.Attack_Down.UseVisualStyleBackColor = true;
+            this.Attack_Left.Location = new System.Drawing.Point(5, 57);
+            this.Attack_Left.Name = "Attack_Left";
+            this.Attack_Left.Size = new System.Drawing.Size(75, 23);
+            this.Attack_Left.TabIndex = 23;
+            this.Attack_Left.Text = "Left";
+            this.Attack_Left.UseVisualStyleBackColor = true;
+            // 
+            // Attack_Up
+            // 
+            this.Attack_Up.Location = new System.Drawing.Point(43, 28);
+            this.Attack_Up.Name = "Attack_Up";
+            this.Attack_Up.Size = new System.Drawing.Size(75, 23);
+            this.Attack_Up.TabIndex = 23;
+            this.Attack_Up.Text = "Up";
+            this.Attack_Up.UseVisualStyleBackColor = true;
+            this.Attack_Up.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 

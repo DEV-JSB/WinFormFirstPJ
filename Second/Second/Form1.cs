@@ -12,6 +12,82 @@ namespace Second
 {
     public partial class Form1 : Form
     {
+        private Game game;
+        private Random random = new Random();
+        
+        public void UpdateCharacters()
+        {
+            MapIcon_Player.Location = game.PlayerLocation;
+            PlayerHitPoint.Text = game.PlayerHitPoints.ToString();
+
+            bool showBat = false;
+            bool showChost = false;
+            bool showGhoul = false;
+            int enemiesShown = 0;
+            
+            foreach(Enemy enemy in game.Enemies)
+            {
+                if(enemy is Bat)
+                {
+                    MapIcon_Bat.Location = enemy.Location;
+                    BatHitPoint.Text = enemy.HitPoints.ToString();
+                    if(enemy.HitPoints > 0)
+                    {
+                        showBat = true;
+                        ++enemiesShown;
+                    }
+                }
+            }
+
+
+            MapIcon_BluePotion.Visible = false;
+            MapIcon_Bow.Visible = false;
+            MapIcon_RedPotion.Visible = false;
+            MapIcon_Mase.Visible = false;
+            MapIcon_Sword.Visible = false;
+
+            Control weaponControl = null;
+            switch (game.WeaponInRoom.Name)
+            {
+                case "Sword":
+                    weaponControl = MapIcon_Sword;
+                    break;
+            }
+
+
+            if (game.CheckPlayerInventory("Sword"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("Bow"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("Mase"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("BluePotion"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("RedPotion"))
+                Inventory_Sword.Visible = true;
+
+            weaponControl.Location = game.WeaponInRoom.Location;
+            if (game.WeaponInRoom.PickedUp)
+                weaponControl.Visible = false;
+            else
+                weaponControl.Visible = true;
+            if(game.PlayerHitPoints <= 0 )
+            {
+                MessageBox.Show("You died");
+                Application.Exit();
+            }
+            if(enemiesShown < 1)
+            {
+                MessageBox.Show("You have defeated the enemies on this level");
+                game.NewLevel(random);
+                UpdateCharacters();
+            }
+
+
+
+        }
+
+
         public Form1()
         {
             InitializeComponent();
@@ -19,12 +95,14 @@ namespace Second
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            game = new Game(new Rectangle(78, 57, 420, 155));
+            game.NewLevel(random);
+            UpdateCharacters();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+             
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -73,6 +151,31 @@ namespace Second
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlayerHitPoint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MapIcon_Bat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inventory_RedPotion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inventory_Maze_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MapIcon_Ghost_Click(object sender, EventArgs e)
         {
 
         }

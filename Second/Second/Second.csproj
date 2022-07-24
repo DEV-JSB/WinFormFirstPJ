@@ -52,6 +52,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="Object\Bat.cs" />
+    <Compile Include="Object\Enemy.cs" />
+    <Compile Include="Object\Mover.cs" />
+    <Compile Include="Object\Player.cs" />
+    <Compile Include="Object\Sword.cs" />
+    <Compile Include="Object\Weapon.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -67,6 +75,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\Second.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +136,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mace1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Second.exe" />
+    <Content Include="bin\Debug\Second.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

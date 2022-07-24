@@ -9,7 +9,7 @@ namespace Second
 {
     enum Direction { Up, Down, Left, Right };
 
-    abstract class Mover
+    class Mover
     {
         private const int MoveInterval = 10;
        
@@ -33,6 +33,7 @@ namespace Second
             else
                 return false;
         }
+     
 
         public Point Move(Direction direction , Rectangle boundaries)
         {
