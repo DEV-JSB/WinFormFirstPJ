@@ -27,7 +27,7 @@ namespace Second
         {
             this.hitPoints = hitPoints;
         }
-        public abstract void Move(Random random);
+        public abstract void Move(Random random, Rectangle boundaries);
 
         public void Hit(int maxDamage, Random random)
         {

@@ -380,6 +380,7 @@ namespace Second
             this.MoveDown.TabIndex = 22;
             this.MoveDown.Text = "Down";
             this.MoveDown.UseVisualStyleBackColor = true;
+            this.MoveDown.Click += new System.EventHandler(this.MoveDown_Click);
             // 
             // MoveRight
             // 
@@ -389,6 +390,7 @@ namespace Second
             this.MoveRight.TabIndex = 21;
             this.MoveRight.Text = "Right";
             this.MoveRight.UseVisualStyleBackColor = true;
+            this.MoveRight.Click += new System.EventHandler(this.MoveRight_Click);
             // 
             // MoveLeft
             // 
@@ -398,6 +400,7 @@ namespace Second
             this.MoveLeft.TabIndex = 20;
             this.MoveLeft.Text = "Left";
             this.MoveLeft.UseVisualStyleBackColor = true;
+            this.MoveLeft.Click += new System.EventHandler(this.MoveLeft_Click);
             // 
             // MoveUp
             // 
@@ -407,6 +410,7 @@ namespace Second
             this.MoveUp.TabIndex = 19;
             this.MoveUp.Text = "Up";
             this.MoveUp.UseVisualStyleBackColor = true;
+            this.MoveUp.Click += new System.EventHandler(this.MoveUp_Click);
             // 
             // groupBox2
             // 

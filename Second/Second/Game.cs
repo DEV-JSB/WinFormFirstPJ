@@ -27,7 +27,7 @@ namespace Second
 
         public Game(Rectangle boundraies)
         {
-            this.boundaries = boundaries;
+            this.boundaries = boundraies;
             player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 70));
         }
         public void Move(Direction direction, Random random)
@@ -35,7 +35,7 @@ namespace Second
             player.Move(direction);
             foreach (Enemy enemy in Enemies)
             {
-                enemy.Move(random);
+                enemy.Move(random, boundaries);
             }
         }
         public void Equip(string weaponName)
@@ -58,7 +58,7 @@ namespace Second
         {
             player.Attack(direction, random);
             foreach (Enemy enemy in Enemies)
-                enemy.Move(random);
+                enemy.Move(random, boundaries);
         }
         private Point GetRandomLocation(Random random)
         {

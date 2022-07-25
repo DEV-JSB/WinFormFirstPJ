@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+enum Direction { Up, Down, Left, Right };
 
 namespace Second
 {
@@ -14,11 +15,18 @@ namespace Second
     {
         private Game game;
         private Random random = new Random();
-        
+        public void UpdateIcon()
+        {
+            MapIcon_Player.Update();
+            MapIcon_Bat.Update();
+        }
         public void UpdateCharacters()
         {
             MapIcon_Player.Location = game.PlayerLocation;
+            MapIcon_Player.Visible = true;
             PlayerHitPoint.Text = game.PlayerHitPoints.ToString();
+            UpdateIcon();
+            
 
             bool showBat = false;
             bool showChost = false;
@@ -29,6 +37,7 @@ namespace Second
             {
                 if(enemy is Bat)
                 {
+                    MapIcon_Bat.Visible = true;
                     MapIcon_Bat.Location = enemy.Location;
                     BatHitPoint.Text = enemy.HitPoints.ToString();
                     if(enemy.HitPoints > 0)
@@ -91,6 +100,7 @@ namespace Second
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -98,6 +108,7 @@ namespace Second
             game = new Game(new Rectangle(78, 57, 420, 155));
             game.NewLevel(random);
             UpdateCharacters();
+            MapIcon_Player.BringToFront();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -178,6 +189,32 @@ namespace Second
         private void MapIcon_Ghost_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MoveUp_Click(object sender, EventArgs e)
+        {
+            game.Move(Direction.Up, random);
+            UpdateCharacters();
+        }
+
+        private void MoveLeft_Click(object sender, EventArgs e)
+        {
+            game.Move(Direction.Left, random);
+            UpdateCharacters();
+
+        }
+
+        private void MoveRight_Click(object sender, EventArgs e)
+        {
+            game.Move(Direction.Right, random);
+            UpdateCharacters();
+
+        }
+
+        private void MoveDown_Click(object sender, EventArgs e)
+        {
+            game.Move(Direction.Down, random);
+            UpdateCharacters();
         }
     }
 }

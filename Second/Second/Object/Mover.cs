@@ -7,7 +7,6 @@ using System.Drawing;
 
 namespace Second
 {
-    enum Direction { Up, Down, Left, Right };
 
     class Mover
     {
@@ -45,7 +44,7 @@ namespace Second
                         newLocation.Y -= MoveInterval;
                     break;
                 case Direction.Down:
-                    if (newLocation.Y + MoveInterval >= boundaries.Bottom)
+                    if (newLocation.Y + MoveInterval <= boundaries.Bottom)
                         newLocation.Y += MoveInterval;
                     break;
                 case Direction.Left:
@@ -53,7 +52,7 @@ namespace Second
                         newLocation.X -= MoveInterval;
                     break;
                 case Direction.Right:
-                    if (newLocation.X + MoveInterval >= boundaries.Right)
+                    if (newLocation.X + MoveInterval <= boundaries.Right)
                         newLocation.X += MoveInterval;
                     break;
                 default:
