@@ -20,13 +20,35 @@ namespace Second
             MapIcon_Player.Update();
             MapIcon_Bat.Update();
         }
+        public void ResetIcon()
+        {
+            MapIcon_BluePotion.Visible = false;
+            MapIcon_Bow.Visible = false;
+            MapIcon_RedPotion.Visible = false;
+            MapIcon_Mase.Visible = false;
+            MapIcon_Sword.Visible = false;
+        }
+
+        public void UpdatePlayerInventory()
+        {
+            if (game.CheckPlayerInventory("Sword"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("Bow"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("Mase"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("BluePotion"))
+                Inventory_Sword.Visible = true;
+            if (game.CheckPlayerInventory("RedPotion"))
+                Inventory_Sword.Visible = true;
+        }
         public void UpdateCharacters()
         {
             MapIcon_Player.Location = game.PlayerLocation;
             MapIcon_Player.Visible = true;
             PlayerHitPoint.Text = game.PlayerHitPoints.ToString();
             UpdateIcon();
-            
+            UpdatePlayerInventory();
 
             bool showBat = false;
             bool showChost = false;
@@ -47,33 +69,14 @@ namespace Second
                     }
                 }
             }
-
-
-            MapIcon_BluePotion.Visible = false;
-            MapIcon_Bow.Visible = false;
-            MapIcon_RedPotion.Visible = false;
-            MapIcon_Mase.Visible = false;
-            MapIcon_Sword.Visible = false;
-
             Control weaponControl = null;
             switch (game.WeaponInRoom.Name)
             {
                 case "Sword":
                     weaponControl = MapIcon_Sword;
+                    MapIcon_Sword.Visible = true;
                     break;
             }
-
-
-            if (game.CheckPlayerInventory("Sword"))
-                Inventory_Sword.Visible = true;
-            if (game.CheckPlayerInventory("Bow"))
-                Inventory_Sword.Visible = true;
-            if (game.CheckPlayerInventory("Mase"))
-                Inventory_Sword.Visible = true;
-            if (game.CheckPlayerInventory("BluePotion"))
-                Inventory_Sword.Visible = true;
-            if (game.CheckPlayerInventory("RedPotion"))
-                Inventory_Sword.Visible = true;
 
             weaponControl.Location = game.WeaponInRoom.Location;
             if (game.WeaponInRoom.PickedUp)
@@ -92,15 +95,12 @@ namespace Second
                 UpdateCharacters();
             }
 
-
-
         }
 
 
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

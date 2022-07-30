@@ -58,6 +58,8 @@ namespace Second
             if (!game.WeaponInRoom.PickedUp)
             {
                 // see if the weapon is nearby , and possibly pick it up
+                if(Nearby(game.WeaponInRoom.Location,))
+                Equip(game.WeaponInRoom.Name);
             }
         }
     }

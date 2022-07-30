@@ -28,8 +28,13 @@ namespace Second
 
         public bool Nearby(Point enemy, Point point, int radius)
         {
-            // 몰 ? 루 
-            return true;
+            if (enemy.X + point.X <= radius
+                && enemy.Y + point.Y <= radius)
+            {
+                return true;
+            }
+            else
+                return false;
         }
 
         public Point Move(Direction direction, Point point,Rectangle boundaries)
