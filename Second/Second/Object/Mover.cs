@@ -21,7 +21,16 @@ namespace Second
             this.game = game;
             this.location = location;
         }
-
+        public bool Nearby(Point enemy, Point point, int radius)
+        {
+            if (enemy.X - point.X <= radius
+                && enemy.Y - point.Y <= radius)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
         public bool Nearby(Point locationToCheck, int distance)
         {
             if (Math.Abs(location.X - locationToCheck.X) < distance &&

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace Second
 {
-    class Sword : Weapon
+    class Bow : Weapon
     {
-        public Sword(Game game,Point location)
-            :base(game,location)
+        public Bow(Game game, Point location)
+            : base(game, location)
         { }
-        public override string Name { get { return "Sword"; } }
+        public override string Name { get { return "Bow"; } }
         public override void Attack(Direction dircetion, Random random)
         {
-            DamageEnemy(dircetion, 11, 4, random);
+            DamageEnemy(dircetion, 10, 2, random);
         }
     }
 }

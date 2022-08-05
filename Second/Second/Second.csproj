@@ -54,7 +54,11 @@
     </Compile>
     <Compile Include="Game.cs" />
     <Compile Include="Object\Bat.cs" />
+    <Compile Include="Object\Bow.cs" />
     <Compile Include="Object\Enemy.cs" />
+    <Compile Include="Object\Ghost.cs" />
+    <Compile Include="Object\Ghoul.cs" />
+    <Compile Include="Object\Mace.cs" />
     <Compile Include="Object\Mover.cs" />
     <Compile Include="Object\Player.cs" />
     <Compile Include="Object\Sword.cs" />

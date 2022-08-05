@@ -36,7 +36,12 @@ namespace Second
             foreach (Enemy enemy in Enemies)
             {
                 enemy.Move(random, boundaries);
+                if(enemy.NearPlayer())
+                {
+                    HitPlayer(1, random);
+                }
             }
+            
         }
         public void Equip(string weaponName)
         {
@@ -58,7 +63,9 @@ namespace Second
         {
             player.Attack(direction, random);
             foreach (Enemy enemy in Enemies)
+            {
                 enemy.Move(random, boundaries);
+            }
         }
         private Point GetRandomLocation(Random random)
         {
@@ -76,6 +83,14 @@ namespace Second
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
                     break;
+                case 2:
+                    Enemies.Clear();
+                    Enemies = new List<Enemy>();
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                    break;
+
+
             }
 
         }

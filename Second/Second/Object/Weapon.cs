@@ -26,16 +26,7 @@ namespace Second
         public abstract string Name { get; }
         public abstract void Attack(Direction dircetion, Random random);
 
-        public bool Nearby(Point enemy, Point point, int radius)
-        {
-            if (enemy.X + point.X <= radius
-                && enemy.Y + point.Y <= radius)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
+        
 
         public Point Move(Direction direction, Point point,Rectangle boundaries)
         {

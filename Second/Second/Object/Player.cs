@@ -32,9 +32,13 @@ namespace Second
             }
         }
 
-        public void Attack(Direction direction,Random random)
+        public int Attack(Direction direction,Random random)
         {
-
+            if(null != equippedWeapon)
+            {
+                equippedWeapon.Attack(direction, random);
+            }
+            return 0;
         }
         public void Hit(int maxDamage, Random random)
         {
@@ -49,7 +53,9 @@ namespace Second
             foreach (Weapon weapon in inventory)
             {
                 if (weapon.Name == weaponName)
+                {
                     equippedWeapon = weapon;
+                }
             }
         }
         public void Move(Direction direction)
@@ -58,8 +64,12 @@ namespace Second
             if (!game.WeaponInRoom.PickedUp)
             {
                 // see if the weapon is nearby , and possibly pick it up
-                if(Nearby(game.WeaponInRoom.Location,))
-                Equip(game.WeaponInRoom.Name);
+                if(Nearby(game.WeaponInRoom.Location,10))
+                {
+                    game.WeaponInRoom.PickUpWeapon();
+                    inventory.Add(game.WeaponInRoom);
+                    Equip(game.WeaponInRoom.Name);
+                }
             }
         }
     }

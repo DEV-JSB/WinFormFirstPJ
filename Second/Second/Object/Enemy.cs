@@ -27,6 +27,7 @@ namespace Second
         {
             this.hitPoints = hitPoints;
         }
+        public void GetDamage(int damage) { hitPoints -= damage; }
         public abstract void Move(Random random, Rectangle boundaries);
 
         public void Hit(int maxDamage, Random random)
@@ -34,7 +35,7 @@ namespace Second
             hitPoints -= random.Next(1, maxDamage);
         }
 
-        protected bool NearPlayer()
+        public bool NearPlayer()
         {
             return (Nearby(game.PlayerLocation, NearPlayerDistance));
         }

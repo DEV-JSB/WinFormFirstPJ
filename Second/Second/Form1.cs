@@ -68,11 +68,46 @@ namespace Second
                         ++enemiesShown;
                     }
                 }
+                if (enemy is Ghost)
+                {
+                    MapIcon_Bat.Visible = true;
+                    MapIcon_Bat.Location = enemy.Location;
+                    BatHitPoint.Text = enemy.HitPoints.ToString();
+                    if (enemy.HitPoints > 0)
+                    {
+                        showBat = true;
+                        ++enemiesShown;
+                    }
+                }
+                if (enemy is Ghoul)
+                {
+                    MapIcon_Bat.Visible = true;
+                    MapIcon_Bat.Location = enemy.Location;
+                    BatHitPoint.Text = enemy.HitPoints.ToString();
+                    if (enemy.HitPoints > 0)
+                    {
+                        showBat = true;
+                        ++enemiesShown;
+                    }
+                }
+
             }
             Control weaponControl = null;
             switch (game.WeaponInRoom.Name)
             {
                 case "Sword":
+                    weaponControl = MapIcon_Sword;
+                    MapIcon_Sword.Visible = true;
+                    break;
+                case "Bow":
+                    weaponControl = MapIcon_Bow;
+                    MapIcon_Sword.Visible = true;
+                    break;
+                case "Mace":
+                    weaponControl = MapIcon_Mase;
+                    MapIcon_Sword.Visible = true;
+                    break;
+                case "Boomb":
                     weaponControl = MapIcon_Sword;
                     MapIcon_Sword.Visible = true;
                     break;
@@ -163,6 +198,7 @@ namespace Second
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            game.Attack(Direction.Up, random);
 
         }
 
@@ -178,12 +214,14 @@ namespace Second
 
         private void Inventory_RedPotion_Click(object sender, EventArgs e)
         {
-
+            game.Equip("RedPotion");
+            Inventory_Sword.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void Inventory_Maze_Click(object sender, EventArgs e)
         {
-
+            game.Equip("Maze");
+            Inventory_Sword.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void MapIcon_Ghost_Click(object sender, EventArgs e)
@@ -214,6 +252,31 @@ namespace Second
         private void MoveDown_Click(object sender, EventArgs e)
         {
             game.Move(Direction.Down, random);
+            UpdateCharacters();
+        }
+
+        private void Inventory_Sword_Click(object sender, EventArgs e)
+        {
+            game.Equip("Sword");
+            Inventory_Sword.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void Attack_Right_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Right, random);
+            UpdateCharacters();
+
+        }
+
+        private void Attack_Down_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Down, random);
+            UpdateCharacters();
+        }
+
+        private void Attack_Left_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Left, random);
             UpdateCharacters();
         }
     }

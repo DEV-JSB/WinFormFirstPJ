@@ -207,6 +207,7 @@ namespace Second
             this.Inventory_Sword.TabIndex = 10;
             this.Inventory_Sword.TabStop = false;
             this.Inventory_Sword.Visible = false;
+            this.Inventory_Sword.Click += new System.EventHandler(this.Inventory_Sword_Click);
             // 
             // Inventory_BluePostion
             // 
@@ -452,6 +453,7 @@ namespace Second
             this.Attack_Down.TabIndex = 25;
             this.Attack_Down.Text = "Down";
             this.Attack_Down.UseVisualStyleBackColor = true;
+            this.Attack_Down.Click += new System.EventHandler(this.Attack_Down_Click);
             // 
             // Attack_Right
             // 
@@ -461,6 +463,7 @@ namespace Second
             this.Attack_Right.TabIndex = 24;
             this.Attack_Right.Text = "Right";
             this.Attack_Right.UseVisualStyleBackColor = true;
+            this.Attack_Right.Click += new System.EventHandler(this.Attack_Right_Click);
             // 
             // Attack_Left
             // 
@@ -470,6 +473,7 @@ namespace Second
             this.Attack_Left.TabIndex = 23;
             this.Attack_Left.Text = "Left";
             this.Attack_Left.UseVisualStyleBackColor = true;
+            this.Attack_Left.Click += new System.EventHandler(this.Attack_Left_Click);
             // 
             // Attack_Up
             // 

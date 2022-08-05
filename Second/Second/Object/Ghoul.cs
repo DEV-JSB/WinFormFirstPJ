@@ -8,9 +8,9 @@ using System.Drawing;
 
 namespace Second
 {
-    class Bat : Enemy
+    class Ghoul : Enemy
     {
-        public Bat(Game game, Point location)
+        public Ghoul(Game game, Point location)
             : base(game, location, 6)
         {
         }
