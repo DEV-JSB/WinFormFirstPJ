@@ -1,0 +1,7 @@
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.csproj.AssemblyReference.cache
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.Form1.resources
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.csproj.GenerateResource.cache
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.GeneratedMSBuildEditorConfig.editorconfig
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.AssemblyInfoInputs.cache
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.AssemblyInfo.cs
+D:\WinFormFirstPJ\Invader\obj\Debug\netcoreapp3.1\Invader.csproj.CoreCompileInputs.cache
