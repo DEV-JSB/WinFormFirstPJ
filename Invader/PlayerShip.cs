@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
+using System.Runtime;
 namespace Invader
 {
     class PlayerShip
@@ -9,7 +10,7 @@ namespace Invader
         private const int horizontalInterval = 10;
         public Point Location { get; private set; }
 
-        public Bitmap image = new Bitmap("Player.png");
+        public Bitmap image = new Bitmap();
 
         private bool alive;
 

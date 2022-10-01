@@ -65,11 +65,17 @@ namespace Invader
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             game.Go();
-            foreach(Keys key in keysPressed)
+            foreach (Keys key in keysPressed)
             {
-                if(key == Keys.Left)
+                if (key == Keys.Left)
                 {
-                    game.MovePlayer();
+                    game.MovePlayer(Direction.Left, gameOver);
+                    return;
+                }
+                else if (key == Keys.Right)
+                {
+                    game.MovePlayer(Direction.Right, gameOver);
+                    return;
                 }
             }
         }
