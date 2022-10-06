@@ -1,0 +1,15 @@
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\bin\Release\netcoreapp3.1\Invader.exe
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\bin\Release\netcoreapp3.1\Invader.deps.json
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\bin\Release\netcoreapp3.1\Invader.runtimeconfig.json
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\bin\Release\netcoreapp3.1\Invader.runtimeconfig.dev.json
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\bin\Release\netcoreapp3.1\Invader.dll
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\bin\Release\netcoreapp3.1\Invader.pdb
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.Form1.resources
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.csproj.GenerateResource.cache
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.AssemblyInfoInputs.cache
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.AssemblyInfo.cs
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.csproj.CoreCompileInputs.cache
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.dll
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.pdb
+D:\UNITY\JK_MU\WinFormFirstPJ\Invader\obj\Release\netcoreapp3.1\Invader.genruntimeconfig.cache

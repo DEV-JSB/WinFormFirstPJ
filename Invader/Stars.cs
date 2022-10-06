@@ -24,7 +24,16 @@ namespace Invader
     {
         private List<Star> stars;
         private Rectangle formArea;
-        
+
+
+        public Stars(Random random, Rectangle formArea)
+        {
+            this.formArea = formArea;
+            stars = new List<Star>();
+            for (int i = 1; i < 300; i++)
+                AddStar(random);
+        }
+
         private void AddStar(Random random)
         {
             int height = formArea.Height;

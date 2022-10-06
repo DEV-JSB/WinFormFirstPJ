@@ -22,6 +22,9 @@ namespace Invader
 {
     public partial class Form1 : Form
     {
+        private Stars stars;
+
+        public int Frame = 0;
         List<Keys> keysPressed = new List<Keys>();
         private bool gameOver;
         private Game game;
@@ -53,7 +56,11 @@ namespace Invader
                 keysPressed.Remove(e.KeyCode);
             keysPressed.Add(e.KeyCode);
         }
-
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            game.Draw(graphics, Frame, gameOver);
+        }
 
         private void From1_KeyUp(object sender,KeyEventArgs e)
         {
